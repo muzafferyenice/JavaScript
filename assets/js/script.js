@@ -1,1 +1,1 @@
-console.log("bu ir external script tir");
+console.log("Bu bir external script tir");

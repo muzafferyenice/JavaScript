@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="setUserInfo()">Click Me</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+      const user1 = {
+        name: "Ali",
+        age: 21,
+        salary: 15000,
+        phone: {
+          gsm: "23424242",
+          line: "23423423423",
+        },
+      };
+
+      const user2 = {
+        name: "Ayşe",
+        age: 21,
+      };
+
+      function setUserInfo() {
+        const newSalary = user2.salary * 1.15;
+
+        const phone = user2?.phone?.gsm;
+
+       /*  if (user2 && user2phone && user2.phone.gsm) {
+          document.querySelector(".gsm").innerHTML = user2.phone.gsm;
+        } else {
+          document.querySelector(".gsm").innerHTML = "no phone";
+        } eskiden ES 5 de bu sekilde kontrol yapilirdi simdi ise 33. satirdsa */
+
+        console.log(`Sn. ${user2.name} yeni maaşınız ${newSalary} olmnuştur`);
+
+    
+      }
+    </script>
+  </body>
+</html>
