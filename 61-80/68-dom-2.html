@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="menu">
+    <p class="desc">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+      aliquam dolores nisi dolore, minima architecto consequatur placeat
+      maiores autem! Maiores nesciunt laboriosam, voluptas porro impedit
+      officiis consequuntur libero harum explicabo?
+    </p>
+    <ul>
+      <li><a href="http://">Link1</a></li>
+      <li>
+        <a href="https://google.com" id="lnk">Link2</a>
+      </li>
+      <li><a href="http://">Link3</a></li>
+      <li><a href="http://">Link4</a></li>
+      <li><a href="http://">Link5</a></li>
+      <li><a href="http://">Link6</a></li>
+    </ul>
+  </div>
+
+
+  <script>
+    document.querySelector("#lnk").addEventListener("click", (e) => {
+      e.preventDefault();
+
+      e.target.closest(".menu").querySelector(".desc").innerHTML = "Hello World";
+
+    });
+
+
+    console.log(document.querySelector(".menu ul").children);
+
+    console.log(document.querySelector("#lnk").parentElement.parentElement);
+
+    console.log(document.querySelector("#lnk").parentElement.nextElementSibling);
+    console.log(document.querySelector("#lnk").parentElement.previousElementSibling);
+    console.log(document.querySelector("#lnk").parentElement.parentElement.children);
+
+
+  </script>
+</body>
+
+</html>

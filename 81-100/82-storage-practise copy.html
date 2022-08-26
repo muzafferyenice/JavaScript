@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="frm">
+    <input type="text" id="txtName" placeholder="Type your name" />
+    <button id="btnSave">Save</button>
+  </form>
+
+
+  <p id="message"></p>
+
+  <script>
+    document.querySelector("#btnSave").addEventListener("click", () => {
+      const name = document.querySelector("#txtName").value;
+      if (!name) return;
+
+      localStorage.setItem("customerName", name);
+    });
+
+    const handleCounter = () => {
+      let counter = localStorage.getItem("pageCounter");
+      //counter = counter ?? 1
+      counter ??= 1;
+
+      document.querySelector(
+        "#message"
+      ).innerHTML = `Bu sayfayı <b>${counter}</b>. defa ziyaret ediyorsunuz`;
+
+      localStorage.setItem("pageCounter", ++counter);
+    };
+
+    const handleName = () => {
+      const customerName = localStorage.getItem("customerName");
+
+      if (customerName) {
+        document.querySelector("#frm").style.display = "none";
+        const elH1 = document.createElement("h1");
+        elH1.innerText = `Merhaba ${customerName}`;
+        document.querySelector("body").prepend(elH1);
+      }
+
+    }
+
+
+
+
+    handleCounter();
+    handleName();
+
+
+  </script>
+</body>
+
+</html>

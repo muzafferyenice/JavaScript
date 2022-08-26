@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Document</title>
+</head>
+
+<body>
+ <script>
+  const getAverage = (firstName, lastName, ...points) => {
+
+   const avg = points.reduce((total, p) => total + p, 0) / points.length;
+
+   return `${firstName} ${lastName} isimli öğrencinin ortalaması ${avg}`;
+  };
+
+
+
+
+  console.log(getAverage("Ali", "Gel", 12, 67, 89));
+  console.log(getAverage("Ayşe", "Gel", 12, 89));
+  console.log(getAverage("Veli", "Gel", 89));
+  console.log(getAverage("Barış", "Gel"));
+  console.log(getAverage("Selma", "Gel", 23, 56, 87, 98, 22, 56));
+ </script>
+</body>
+
+</html>

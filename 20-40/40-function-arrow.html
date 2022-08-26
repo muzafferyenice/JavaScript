@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="number" id="txtYear" placeholder="Type your birth year" />
+  <button onclick="onCalculateClick()">Calculate</button>
+  <h4 id="result"></h4>
+  ​
+  <script>
+    //arrow ile function 
+    const tutar=(fiyat,kdv,ind)=>
+    {if (fiyat>1500) {
+      return fiyat=fiyat-fiyat*ind/100;
+    }
+  }
+
+
+    const sum4=(a,b)=> a+b;
+
+    const sum = (a, b) => {
+      return a + b;
+    }
+    //expression yontemi
+    const sum2 = function (a, b) {
+      return a + b;
+    };
+    //geleneksel yontem
+    function sum1(a, b) {
+      return a + b;
+    }
+
+       console.log(tutar(1600,20,10));
+    console.log(sum4(6, 7));
+
+
+
+
+  
+   
+     
+  </script>
+</body>
+
+</html>

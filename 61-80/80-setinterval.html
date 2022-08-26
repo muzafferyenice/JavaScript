@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <ul id="list">
+
+  </ul>
+  <button id="btnStart">Start</button>
+  <button id="btnStop">Stop</button>
+
+  <script>
+    let listInterval; // global variable
+
+    document.querySelector("#btnStart").addEventListener("click", () => {
+      const list = document.querySelector("#list");
+
+      listInterval = setInterval(() => {
+        const li = document.createElement("h1");
+        li.innerText = "Test";
+        list.appendChild(li);
+      
+      }, 2000);
+
+    });
+
+
+    document.querySelector("#btnStop").addEventListener("click", () => {
+      clearInterval(listInterval)
+    });
+  </script>
+</body>
+
+</html>

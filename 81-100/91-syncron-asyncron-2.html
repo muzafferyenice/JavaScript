@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Document</title>
+</head>
+
+<body>
+ <script>
+  const sum = (a, b) => {
+   setTimeout(() => {
+    let total = a + b;
+    return total;
+   }, 10);
+  };
+
+
+  console.log("Sayıların toplamı:");
+  const total = sum(12, 45);
+
+  console.log(total);
+
+      // Bu şekilde asenkron taraftan senkron tarafa data
+      // gönderilemez. Çünkü ikisi de ayrı thread lerde çalışıyor
+
+
+ </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const meyveler = ["Elma", "Armut", "Muz", "Kivi"];
+    console.log(meyveler);
+    meyveler.pop();
+    console.log(meyveler);
+    meyveler.push("Ananas");
+    console.log(meyveler);
+    meyveler.shift();
+    console.log(meyveler);
+    meyveler.unshift("Çilek");
+    console.log(meyveler);
+    meyveler.reverse();
+    console.log(meyveler);
+    meyveler.sort();
+    console.log(meyveler);
+
+    meyveler.splice(1, 0, "Kiraz");
+    console.log(meyveler);
+    meyveler.splice(2, 2);
+    console.log(meyveler);
+    meyveler.splice(1, 1, "Ceviz", "Fındık");
+    console.log(meyveler);
+    meyveler.splice(0, meyveler.length);
+    console.log(meyveler);
+  </script>
+</body>
+
+</html>

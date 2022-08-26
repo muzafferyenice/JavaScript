@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const cars = [
+      {
+        id: 5,
+        model: "Kia Rio",
+        doors: 4,
+        seats: 5,
+        luggage: 300,
+        transmission: "Manuel",
+        airConditioning: true,
+        age: 5,
+        pricePerHour: 20,
+        fuelType: "Gasoline",
+        image: ["79b5ba7f-88d0-4afd-9ddd-042b040a2d08"],
+        builtIn: true,
+      },
+      {
+        id: 6,
+        model: "Ford Fiesta",
+        doors: 4,
+        seats: 5,
+        luggage: 300,
+        transmission: "Manuel",
+        airConditioning: true,
+        age: 3,
+        pricePerHour: 20,
+        fuelType: "Diesel",
+        image: ["f767db04-8bf6-4ed6-866f-6bc99b422b4b"],
+        builtIn: true,
+      },
+    ];
+    console.log(cars[0].model)
+    for (let i = 0; i < cars.length; i++) {
+      if (cars[i].id === 6) {
+        console.log(cars[i].model);
+      }
+    }
+  </script>
+</body>
+
+</html>

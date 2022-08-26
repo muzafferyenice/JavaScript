@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="number" id="txtNum" placeholder="Type a number" />
+  <button onclick="onCalculateClick()">Calculate</button>
+  <h4 id="result"></h4>
+  <script>
+    function onCalculateClick() {
+      const num = document.querySelector("#txtNum").value;
+      const isPrime = isTheNumberPrime(num);
+      document.querySelector(
+        "#result"
+      ).innerHTML = `Girmiş olduğunuz ${num} sayısı ${isPrime ? "asaldır" : "asal değildir"
+        }`;
+    }
+    function isTheNumberPrime(num) {
+      if (!num || isNaN(num) || num < 2) return false;
+      let flag = true; // num is a prime
+      for (let i = 2; i < num; i++) {
+        if (num % i == 0) {
+          flag = false; // num is not a prime
+          break;
+        }
+      }
+      return flag;
+    }
+  </script>
+</body>
+
+</html>

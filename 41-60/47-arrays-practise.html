@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="btnFind">Find the biggest number</button>
+  ​
+  <script>
+    const arr = [12, 45, 6, 23, 676, 2, 1];
+
+    document.querySelector("#btnFind").addEventListener("click", () => {
+      const maxNumber = getMaxNumber(arr);
+      alert(`En büyük sayı ${maxNumber}`);
+    });
+
+    const getMaxNumber = (a) => {
+      if (!a && typeof a !== "object" && a.length <= 0) return;
+
+      let maxNum = a[0];
+      for (let i = 1; i < a.length; i++) {
+        if (maxNum < a[i]) maxNum = a[i];
+      }
+
+      return maxNum;
+    };
+  </script>
+</body>
+
+</html>

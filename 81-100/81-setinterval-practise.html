@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  @font-face {
+   font-family: 'digital';
+   src: url('../assets/font/digital-7.ttf');
+  }
+.clock{
+ font-family: digital;
+ list-style: none;
+ margin: 1rem;
+ padding: 1rem;
+ display: flex;
+background-color: antiquewhite;
+border-radius: 5px;
+width: 50vw;
+font-size: 3rem;
+justify-content: center;
+color: green;
+}
+.hidden{
+ /* opacity: 0; */
+ visibility:hidden ;
+}
+
+
+
+ </style>
+</head>
+<body>
+ 
+<ul class="clock" id="clock">
+ <li>23</li>
+ <li>:</li>
+ <li>34</li>
+</ul>
+
+<script src="../assets/js/81-setinterval-practise.js"></script>
+
+</body>
+</html>

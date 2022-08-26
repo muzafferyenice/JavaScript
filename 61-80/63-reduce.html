@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Document</title>
+</head>
+
+<body>
+
+
+
+ <script>
+
+  const nums=[123,365,985,665,54,55];
+
+  //klasik yontem
+
+  let total=0;
+  for(let i=0; i<nums.length;i++){
+   total=total+nums[i];
+  }
+  console.log(total);
+
+  //reduce ile
+
+const t=nums.reduce( (total,x)=> total + x, 0);
+
+   console.log(t);
+
+
+
+   const maaslar = [1200, 3000, 12000, 5600, 2000, 1000];
+
+    const hepsi=maaslar
+     .filter((maas) => maas < 3000)
+     .map((maas) => maas * 1.1)
+     .reduce((maaslarim,maas) => maaslarim+maas);
+     
+     console.log(hepsi);
+
+
+ </script>
+
+</body>
+
+</html>
