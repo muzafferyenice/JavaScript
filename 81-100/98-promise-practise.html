@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Shows</title>
+    <!-- CSS only -->
+</head>
+
+<body>
+    <button id="btn">Click</button>
+
+
+    <script>
+
+        const confirmBox = (msg) => {
+            // Promise yapılarının kendileri senkron çalışır, asenkron değil
+            // Promise yapıları, içlerinde bulunan asenkron kodlardan geri değer
+            // döndürme işlemini handle etmek için kullanılır.
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const result = confirm(msg);
+                    resolve(result);
+                }, 0);
+
+            })
+        }
+
+
+        document.querySelector("#btn").addEventListener("click", () => {
+            console.log("Önceki kodlar");
+            confirmBox("Silmek istediğinizden emin misiniz?")
+                .then(resp => console.log(resp));
+            console.log("Sonraki kodlar");
+        })
+
+
+
+    </script>
+</body>
+
+</html>

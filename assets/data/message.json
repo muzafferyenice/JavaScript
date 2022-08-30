@@ -1,0 +1,8 @@
+[
+  { "id": 1, "message": "hello", "personId": "2" },
+  { "id": 2, "message": "lorem", "personId": "1" },
+  { "id": 3, "message": "hi", "personId": "2" },
+  { "id": 4, "message": "whatsup", "personId": "3" },
+  { "id": 5, "message": "thanks", "personId": "1" },
+  { "id": 6, "message": "goodbby", "personId": "1" }
+]

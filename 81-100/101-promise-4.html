@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Shows</title>
+    <!-- CSS only -->
+</head>
+
+<body>
+    <button id="btn">Click</button>
+
+    <script>
+        const soz1 = (num) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const result = num * 2;
+                    resolve(result);
+                }, 1500);
+            });
+        };
+
+        const soz2 = (num) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const result = num + 100;
+                    resolve(result);
+                }, 3500);
+            });
+        };
+
+        const soz3 = (num) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const result = num / 3;
+                    resolve(result);
+                }, 500);
+            });
+        };
+
+        // Promise chain aşağıdaki gibi oluşturulur
+        const init = async () => {
+            console.log("önceki işlemler");
+
+            const resp1 = await soz1(30);
+            console.log(resp1);
+            const resp2 = await soz2(resp1);
+            console.log(resp2);
+            const resp3 = await soz3(resp2);
+            console.log(resp3);
+            console.log("sonraki işlemler");
+        };
+
+        init();
+    </script>
+</body>
+
+</html>

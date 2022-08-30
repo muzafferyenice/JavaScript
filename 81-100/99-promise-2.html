@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Shows</title>
+    <!-- CSS only -->
+</head>
+
+<body>
+    <button id="btn">Click</button>
+
+    <script>
+        const soz1 = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("sözüm söz 1");
+                }, 1500);
+            });
+        };
+
+        const soz2 = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("sözüm söz 2");
+                }, 3500);
+            });
+        };
+
+        const soz3 = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("sözüm söz 3");
+                }, 500);
+            });
+        };
+
+
+
+        // Eğer asenkron fonksiyonlar belli bir sırada çalıştırılmak isteniyorsa
+        // aşağıdaki gibi birbirinden bağımsız çağrılırsa, istenilen sırada cevap
+        // almak tamamen şansa kalır. Bu sırayı kesin olarak belirlemek için promise 
+        // zinciri (promise chain) oluşturulmalıdır. 
+
+        /*
+        soz1().then((resp) => console.log(resp));
+        soz2().then((resp) => console.log(resp));
+        soz3().then((resp) => console.log(resp));
+        */
+
+
+        // Promise chain aşağıdaki gibi oluşturulur
+
+        soz1().then(resp => {
+            console.log(resp);
+            return soz2();
+        })
+            .then(resp => {
+                console.log(resp);
+                return soz3();
+            })
+            .then(resp => {
+                console.log(resp);
+            })
+
+
+    </script>
+</body>
+
+</html>
